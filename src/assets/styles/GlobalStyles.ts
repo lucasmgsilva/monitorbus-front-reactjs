@@ -29,13 +29,10 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: #221043;
+    --primary: #282C30;
     --secondary: #0F1519;
-    --search: #202327;
     --white: #fff;
     --gray: #7A7A7A;
-    --outline: #2F3336;
-    --retweet: #00C06B;
     font-size: 20px;
   }
  `

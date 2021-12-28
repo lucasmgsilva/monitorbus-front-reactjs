@@ -1,18 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    max-width: 1160px;
-    margin: 0 auto;
-`
-
-export const UserInfo = styled.div`
+export const UserSection = styled.section`
     background-color: var(--secondary);
-    height: 525px;
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
     color: var(--secondary);
 `
 export const StudentID = styled.div`
@@ -26,8 +16,6 @@ export const StudentID = styled.div`
 export const StudentIDBody = styled.div`
     display: flex;
     flex: 1;
-    
-
 `
 
 export const UserImageContainer = styled.div`
@@ -43,8 +31,8 @@ export const UserImageContainer = styled.div`
 export const UserImage = styled.img`
     border-radius: 50%;
     border: 5px solid var(--secondary);
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 `
 
 export const UserData = styled.div`
@@ -56,10 +44,10 @@ export const UserData = styled.div`
     align-items: flex-start;
 `
 export const Title = styled.h1`
-    font-size: 2.5rem;
-    font-family: 'Vujahday Script', sans-serif;
+    font-size: 2.3rem;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 25px;
 `
 
 export const InfoLabel = styled.p`

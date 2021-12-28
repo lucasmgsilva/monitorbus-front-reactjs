@@ -5,7 +5,6 @@ import GlobalStyles from './assets/styles/GlobalStyles';
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      
       <UserDashboard/>
       <GlobalStyles/>
     </BrowserRouter>
