@@ -1,8 +1,12 @@
+import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import UserDashboard from './pages/UserDashboard';
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <UserDashboard/>
+    </BrowserRouter>
   );
 }
 
