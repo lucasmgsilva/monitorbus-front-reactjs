@@ -14,12 +14,13 @@ export const StudentID = styled.div`
 `
 
 export const StudentIDBody = styled.div`
+    font-size: 1rem;
     display: flex;
     flex: 1;
 `
 
 export const UserImageContainer = styled.div`
-    flex: 1.5;
+    flex: 1.2;
     /* background-color: green; */
     display: flex;
     flex-direction: row;
