@@ -33,6 +33,6 @@ export default createGlobalStyle`
     --secondary: #0F1519;
     --white: #fff;
     --gray: #7A7A7A;
-    font-size: 24px;
+    font-size: 20px;
   }
  `

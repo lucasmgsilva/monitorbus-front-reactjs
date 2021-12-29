@@ -26,7 +26,7 @@ export const UserImageContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 10px 25px;
 `
 
 export const UserImage = styled.img`
@@ -38,7 +38,7 @@ export const UserImage = styled.img`
 
 export const UserData = styled.div`
     flex: 2;
-    padding: 25px;
+    padding: 10px 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ export const Title = styled.h1`
     font-size: 2.3rem;
     font-family: 'Indie Flower', cursive;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 20px;
 `
 
 export const InfoLabel = styled.p`

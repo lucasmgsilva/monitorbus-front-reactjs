@@ -18,8 +18,6 @@ const UserMapTravel = () => {
     ]);
     
     const loadMarkers = () => {
-        
-        
         markersPosition.forEach((item, index) => {
             console.log(item);
             new mapboxgl.Marker({
@@ -29,9 +27,7 @@ const UserMapTravel = () => {
     }
 
     useEffect(() => {
-        if (map.current) {
-            return;
-        }; // initialize map only once
+        if (map.current) return;;
 
         map.current = new mapboxgl.Map({
           container: mapContainer.current,
@@ -48,9 +44,7 @@ const UserMapTravel = () => {
         <>
             <UserMapTravelSection>
                 <Container>
-                    <TravelTitle>
-                        VIAGEM
-                    </TravelTitle>
+                    <TravelTitle>TRAJETO</TravelTitle>
                     <MapContainer ref={mapContainer}/>
                 </Container>
             </UserMapTravelSection>
