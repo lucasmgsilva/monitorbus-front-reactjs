@@ -2,6 +2,7 @@ import { Container } from "../../../../components/MainComponents";
 import { MapContainer, TravelTitle, UserMapTravelSection } from "./styles";
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl, { LngLatBounds } from 'mapbox-gl';
+import Api, {RouteType} from '../../../../services/api';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibHVjYXNtZ3NpbHZhIiwiYSI6ImNreHF0aGVidDRlaGQybm80OWg2dzVoeXQifQ.exF-UiLvicFXXWKMkn4Kfg';
 
@@ -12,22 +13,21 @@ const UserMapTravel = () => {
     const [lng, setLng] = useState(-49.079347);
     const [zoom, setZoom] = useState(14);
 
-    const [markersPosition, setMarkersPosition] = useState([
-        {lat: -21.618920, lng: -49.079340},
-        {lat: -21.618915, lng: -49.079335},
-    ]);
-    
-    const loadMarkers = () => {
-        markersPosition.forEach((item, index) => {
-            console.log(item);
-            new mapboxgl.Marker({
-                color: "#000"
-            }).setLngLat([item.lng, item.lat]).addTo(map.current);
-        });
-    }
+    const [route, setRoute] = useState<RouteType | undefined>();
+
+    const [markersPosition, setMarkersPosition] = useState([]);
 
     useEffect(() => {
-        if (map.current) return;;
+        const getRoute = async () => {
+            const data = await Api.getRoute('61d4c748ab792df910997594');
+            setRoute(data);
+            console.log(route);
+        }
+        getRoute();
+
+        
+
+        if (map.current) return;
 
         map.current = new mapboxgl.Map({
           container: mapContainer.current,
@@ -36,8 +36,21 @@ const UserMapTravel = () => {
           zoom: zoom
         });
         
+        const loadMarkers = async () => {
+            const cities = route?.cities;
+            console.log(cities);
+            if (cities){
+                cities.forEach((city, index) => {
+                    console.log(city);
+                    /*new mapboxgl.Marker({
+                        color: "#000"
+                    }).setLngLat([item.lng, item.lat]).addTo(map.current);*/
+                });
+            }
+        }
+
         loadMarkers();
-      });
+      }, []);
 
 
     return (
