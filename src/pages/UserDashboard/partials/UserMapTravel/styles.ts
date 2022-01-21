@@ -16,3 +16,11 @@ export const TravelTitle = styled.h2`
 export const MapContainer = styled.div`
     height: 500px;
 `
+
+export const BusMarker = styled.div`
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+`

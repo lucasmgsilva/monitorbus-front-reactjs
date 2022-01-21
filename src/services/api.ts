@@ -57,6 +57,14 @@ const axiosInstance = axios.create({
     return json;
 }*/
 
+export type TrackingType = {
+    lat: number,
+    lng: number,
+    speed: number
+}
+
+//-----
+
 type Coordinate = {
     lat: number,
     lng: number
@@ -83,9 +91,14 @@ const Api = {
         const response = await axiosInstance.get(`/travels/${travel_id}`);
         const route_id = await response.data.route_id;
         const response2 = await axiosInstance.get(`/routes/${route_id}`);
-        const route: RouteType = await response2.data;
+        const route = await response2.data;
         return route;
     },
+    getCurrentLocationByTravelID: async (travel_id: string): Promise<TrackingType> => {
+        const response = await axiosInstance.get(`/travels/currentLocation/${travel_id}`);
+        return await response.data;
+
+    }
     /*login: async (email, password) => {
         const json = await apiFetchPost(
             '/user/signin',
