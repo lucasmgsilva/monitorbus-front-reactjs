@@ -1,0 +1,22 @@
+.link {
+    width: 20%;
+    color: var(--secondary);
+    background-color: #F7F7F7;
+    border: 1px dashed var(--secondary);
+    border-radius: 15px;
+    margin: 0 10px 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: #E9E9E9;
+    transition: background-color 1s;
+}
+
+@media (max-width: 960px){
+    .link {
+        width: 100%;
+    }
+}

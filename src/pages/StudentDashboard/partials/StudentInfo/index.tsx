@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Container } from '../../../../components/MainComponents';
-import { InfoData, InfoLabel, StudentID, StudentIDBody, Title, UserData, UserImage, UserImageContainer, UserSection } from './styles';
+import { InfoData, InfoLabel, StudentID, StudentIDBody, Title, StudentData, StudentImage, StudentImageContainer, StudentSection } from './styled';
 
-const UserInfo = () => {
+const StudentInfo = () => {
     const [image, setImage] = useState('https://www.lucasmgsilva.com/imagens/bitmoji.png');
     const [name, setName] = useState('Lucas Matheus Gomes da Silva');
     const [course, setCourse] = useState('Tecnologia em Análise e Desenvolvimento de Sistemas');
@@ -10,15 +10,15 @@ const UserInfo = () => {
     const [telephone, setTelephone] = useState('(16) 99735-4480');
 
     return (
-        <UserSection>
+        <StudentSection>
             <Container>
                 <StudentID>
                     <Title>Identidade de Passageiro</Title>
                     <StudentIDBody>
-                        <UserImageContainer>
-                            <UserImage src={image}/>
-                        </UserImageContainer>
-                        <UserData>
+                        <StudentImageContainer>
+                            <StudentImage src={image}/>
+                        </StudentImageContainer>
+                        <StudentData>
                             <InfoLabel>Nome:</InfoLabel>
                             <InfoData>{name}</InfoData>
 
@@ -29,12 +29,12 @@ const UserInfo = () => {
                             <InfoData>{educationalInstitution}</InfoData>
                         <InfoLabel>Telefone:</InfoLabel>
                             <InfoData>{telephone}</InfoData>
-                        </UserData>
+                        </StudentData>
                     </StudentIDBody>
                 </StudentID>
             </Container>
-        </UserSection>
+        </StudentSection>
     );
 }
 
-export default UserInfo;
+export default StudentInfo;

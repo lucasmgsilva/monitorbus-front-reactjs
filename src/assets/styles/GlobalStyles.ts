@@ -35,4 +35,20 @@ export default createGlobalStyle`
     --gray: #7A7A7A;
     font-size: 20px;
   }
+
+  .bus {
+    background-image: url('https://img.icons8.com/emoji/96/000000/oncoming-bus.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-top: -18px;
+  }
+
+  .stoppingBusPoint {
+    background-image: url('https://img.icons8.com/fluency/96/000000/map-pin.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-top: -18px;
+  }
  `
