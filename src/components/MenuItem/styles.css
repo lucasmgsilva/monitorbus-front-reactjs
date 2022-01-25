@@ -8,6 +8,7 @@
     padding: 5px 10px;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
 }
 
 .link:hover {
